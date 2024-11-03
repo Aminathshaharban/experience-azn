@@ -1,0 +1,128 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.nav-item{
+    border: 1px solid white;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+#banner-container1{
+    padding: 0px;
+}
+#banner1{
+    height: 440px;
+    /* opacity: 0.7; */
+}
+#caption1{
+    font-weight: bolder;
+    margin-bottom: 255px ;
+    -webkit-text-fill-color: #000;
+    /* -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke-width: 1px; */
+}
+/* #paraintro{
+    color: #000;
+    -webkit-text-stroke: 1px #fff;
+} */
+
+
+
+#card1img{
+    height: 200px;
+}
+#btn1{
+    margin-left: 85px;
+}
+
+
+#card{
+    width: 478px;
+}
+
+#card2img{
+    height: 200px;
+}
+.card-body{
+    background-color: rgb(242, 242, 242);
+}
+#btn2{
+    margin-left:275px;
+}
+
+
+
+
+
+
+
+#banner-container2{
+    padding: 0px;
+    width: 100vw; 
+    left: -12px;
+}
+#banner2 {
+    height: 350px;
+}
+
+#container{
+    margin: 120px;
+}
+#btn3{
+    margin-left:54px;
+}
+
+#card10{
+    margin-top: -93px;
+    margin-left: 118px;
+    margin-right: 119px;
+    margin-bottom: 40px;
+}
+
+
+#img1{
+    height: 400px;
+}
+
+
+#caption2{
+    margin-bottom: 35px;
+}
+#banner3{
+    height: 500px;
+    padding: 0px;
+    opacity: 0.8;
+}
+#para{
+    margin-left: 127px;
+    opacity: 0.6;
+    width: 635px;
+}
+#banner-container3{
+    padding: 0px;
+    width: 100vw; 
+    left: -12px;
+}
+
+#card3img{
+    height: 170px;
+}
+#form1{
+    margin-left: 115px;
+    margin-right: 117px;
+}
+#form1>div>input{
+    height: 30px;
+    opacity: 0.8;
+}
+#form1>div>textarea{
+    height: 136px;
+    width: 305px;
+    opacity: 0.7;
+}
+#btn5{
+    margin-left: -243px;
+}

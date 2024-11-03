@@ -1,0 +1,44 @@
+/**
+* Azerbaijan Tourism Board
+* Experience Azerbaijan Layout
+* 2020-01-10 14:49:46
+*/
+
+(function () {
+    // Loader
+    var loader = new function(){this.rC=-1;this.r=[];this.add=function(src){this.r.push(src);};this.addTag=function(src,callback){var head=document.getElementsByTagName('head')[0],tag=src.indexOf('.js')>0?'script':'link',s=document.createElement(tag);head.appendChild(s);s.onload=callback;if(tag==='script'){s.type='text/javascript';s.src=src;}else if(tag==='link'){s.rel='stylesheet';s.href=src;}};this.loadNext=function(){this.rC++;if(this.rC>=this.r.length){this.done();}else{var r=this.r[this.rC];this.addTag(r,this.loadNext.bind(this));}};this.done=function(){this.onResourcesLoaded(window.Curator);};this.load=function(cb){this.onResourcesLoaded=cb;this.loadNext();};};
+
+    // Config
+    var config = {"lang":"en","debug":0,"hidePoweredBy":true,"forceHttps":false,"feed":{"id":"cdbfe49e-c39e-44f2-b21e-d63999b2aeb8","apiEndpoint":"https:\/\/api.curator.io\/v1.1","postsPerPage":12,"params":{},"limit":25,"showAds":true},"widget":{"autoLoadNew":false,"template":"widget-waterfall","colWidth":250,"colGutter":0,"showLoadMore":true,"continuousScroll":false,"postsPerPage":12,"animate":true},"post":{"template":"post-general","showTitles":true,"showShare":true,"showComments":false,"showLikes":false,"autoPlayVideos":false,"clickAction":"open-popup","clickReadMoreAction":"open-popup","animate":true,"maxHeight":0},"popup":{"template":"popup","templateWrapper":"popup-wrapper","autoPlayVideos":false,"deepLink":false},"filter":{"template":"filter","showNetworks":false,"showSources":false},"type":"Waterfall","container":"#curator-feed-baku-layout","theme":"sydney"};
+    var colours = {"widgetBgColor":"transparent","bgColor":"#ffffff","borderColor":"#cccccc","iconColor":"#222222","textColor":"#222222","linkColor":"#999999"};
+    var styles = {};
+
+    // Bootstrap
+    function loadWidget (Curator) {
+        Curator.loadWidget(config, colours, styles);
+    }
+
+    // Run Loader
+    loader.add('https://cdn.curator.io/4.0/css/curator.css');
+    loader.add('https://cdn.curator.io/published-css/cdbfe49e-c39e-44f2-b21e-d63999b2aeb8.css');
+    
+    var loaderCallback = loadWidget;
+
+    if (window.define) {
+        // Require detected, use Loader for CSS & Require for JS
+        loaderCallback = function() {
+            require.config({paths: {
+                'curator': 'https://cdn.curator.io/4.0/js/curator.min'
+            }});
+
+            require(['curator'], loadWidget);
+        };
+    } else {
+        // Use Loader for all
+        loader.add('https://cdn.curator.io/4.0/js/curator.min.js');
+    }
+    
+    
+    
+    loader.load(loaderCallback);
+})();
